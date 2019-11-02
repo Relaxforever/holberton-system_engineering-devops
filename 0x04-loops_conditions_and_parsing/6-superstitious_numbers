@@ -1,16 +1,24 @@
 #!/usr/bin/env bash
 # this script prints "Holberton school" with a while 10 times
-x=0
-while [ $x -le 19 ]
+x=1
+while [ $x -le 20 ]
 do
-	if [ $x -eq 3 ]
-	then
-		echo "bad luck"
-	elif [ $x -eq 7 ]
-	then
-		echo "good luck"
-	else
-		echo "Holberton School"
-	fi
+	case $x in
+		4)
+			echo "$x"
+			echo "bad luck from China"
+		;;
+		9)
+			echo "$x"
+			echo "bad luck from Japan"
+		;;
+		17)
+			echo "$x"
+			echo "bad luck from Italy"
+		;;
+		*)
+			echo "$x"
+		;;
+	esac
 	x=$((x + 1))
 done
