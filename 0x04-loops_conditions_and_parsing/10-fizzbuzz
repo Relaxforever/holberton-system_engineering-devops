@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+for x in {1..100}
+do
+	if ! ((x%15)) ;
+	then
+		echo "FizzBuzz"
+	elif ! ((x%3)) ;
+	then
+		echo "Fizz"
+	elif ! ((x%5)) ;
+	then
+		echo "Buzz"
+	else
+		echo "$x"
+	fi
+done
