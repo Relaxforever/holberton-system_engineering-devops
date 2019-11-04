@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# This script wants to catch the rainbow
+echo "$$" >> /var/run/holbertonscript.pid
+_catching_the_rainbow()
+{
+	echo "I hate the kill command"
+	exit
+}
+_RidetheWind()
+{
+	echo "Y U no love me?!"
+	exit
+}
+Canyouseeit()
+{
+	rm "/var/run/holbertonscript.pid"
+}
+for (( ; ; ))
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap _RidetheWind SIGINT
+	trap canyouseeit SIGQUIT SIGTERM
+	trap _catching_the_rainbow SIGTERM
+done
