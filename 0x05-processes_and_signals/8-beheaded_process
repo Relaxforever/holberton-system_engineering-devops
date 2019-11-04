@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script Displays the pid.
+infinity_pid=$(pgrep -f 7-highlander)
+kill -9 "${infinity_pid}"
