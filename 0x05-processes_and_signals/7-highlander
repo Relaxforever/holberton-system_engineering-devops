@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script prints to infinity and beyond indefinitebly
+_Thelastinmortal()
+{
+	echo "I am invincible!!!"
+}
+for (( ; ; ))
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap _Thelastinmortal SIGTERM
+done
