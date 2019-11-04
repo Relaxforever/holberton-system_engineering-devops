@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# This script Displays the pid.
-infinity_pid=$(pgrep -f 4-to_infinity_and_beyond)
-kill "${infinity_pid}"
+# This script Dabs on the fourt point by killing him in a single line
+pkill -f 4-to_infinity_and_beyond
