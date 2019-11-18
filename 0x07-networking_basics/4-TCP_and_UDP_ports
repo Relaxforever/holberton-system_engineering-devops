@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#how to display the listening port, they are listening us I'm telling
+netstat -l -p
