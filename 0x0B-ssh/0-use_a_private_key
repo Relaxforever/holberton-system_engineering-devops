@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# I love people
+ssh -i ~/.ssh/holberton  ubuntu@34.74.97.231
