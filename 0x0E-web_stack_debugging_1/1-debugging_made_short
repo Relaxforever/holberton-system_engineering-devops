@@ -2,4 +2,4 @@
 # fixing the nginx by changing its default ports
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
-pkill nginx
+pkill -o nginx
