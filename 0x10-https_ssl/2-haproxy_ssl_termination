@@ -39,6 +39,7 @@ defaults
 frontend http_front
 	bind *:80
 	bind *:443 ssl crt /etc/haproxy/ssl/www.theautomata.tech.pem
+	redirect scheme https code 301 if !{ ssl_fc }
 	stats uri /haproxy?stats
 	default_backend http_back
 
