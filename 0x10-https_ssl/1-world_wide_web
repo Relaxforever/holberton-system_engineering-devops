@@ -2,7 +2,7 @@
 # Display the information about the subdomains.
 print_subdomains()
 {
-	if [ -z "$2" ];
+	if [ -z $2 ];
 	then
 		dig www.$1 | awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print "The subdomain www is a " $4 " record and points to " $5}'
 		dig lb-01.$1 | awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print "The subdomain lb-01 is a " $4 " record and points to " $5}'
