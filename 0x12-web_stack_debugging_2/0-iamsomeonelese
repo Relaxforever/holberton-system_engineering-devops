@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# god has forsake us
+if [ "$#" -eq 2 ];
+then
+	su "$1"
+	whoami
+fi
