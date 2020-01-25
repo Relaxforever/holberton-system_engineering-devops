@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Create a backup in case the database quite literally gets flooded
+day=$(date '+%d')
+month=$(date '+%m')
+year=$(date '+%Y')
+mysqldump -uroot -p$1 --all-databases > backup.sql
+tar -cavf "$day-$month-$year".tar.gz backup.sql
