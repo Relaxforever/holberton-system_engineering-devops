@@ -5,21 +5,21 @@ from sys import argv
 
 if __name__ == "__main__":
     user_name = get("https://jsonplaceholder.typicode.com/users/{}"
-                        .format(argv[1]))
+                    .format(argv[1]))
     todo_user = get("https://jsonplaceholder.typicode.com/todos")
     user_json = user_name.json()
     list_json = todo_user.json()
     all_task = 0
     done_task = 0
-    string_task = ""
+    string_task = []
 
     for dict_data in list_json:
         if dict_data.get('userId') == int(argv[1]):
             if dict_data.get('completed'):
                 done_task += 1
-                string_task += "\t " + dict_data.get('title') + "\n"
+                string_task.append(dict_data.get('title'))
             all_task += 1
-    print("Employee {} is done with task ({}/{})".format(user_json.get('name'),
-                                                         done_task,
-                                                         all_task))
-    print(string_task,end='')
+    print("Employee {} is done with task ({}/{})"
+          .format(user_json.get('name'), done_task, all_task))
+    for string_title in string_task:
+        print('\t {}'.format(string_title))
