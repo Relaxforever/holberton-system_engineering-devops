@@ -27,5 +27,5 @@ if __name__ == "__main__":
             json_list.append({'task': dicts.get('title'),
                               'completed': dicts.get('completed'),
                               'username': user_json.get('username')})
-            dict_jsons = {argv[1]: json_list}
-            dump(dict_jsons, read_file)
+        dict_jsons = {argv[1]: json_list}
+        dump(dict_jsons, read_file)
