@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 done_task += 1
                 string_task.append(dict_data.get('title'))
             all_task += 1
-    print("Employee {} is done with task ({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(user_json.get('name'), done_task, all_task))
     for string_title in string_task:
         print('\t {}'.format(string_title))
